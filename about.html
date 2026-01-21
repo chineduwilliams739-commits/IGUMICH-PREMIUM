@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | IGUMICH INT'L LIMITED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: #1d3557;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #14213d;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .admin-link {
+            color: #e63946 !important;
+            font-weight: 700 !important;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #1d3557;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: #1d3557;
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            font-size: 14px;
+            color: #e63946;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            color: #1d3557;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e63946;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e63946;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            font-size: 22px;
+            color: #1d3557;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e63946;
+            color: white;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1d3557;
+            transition: 0.3s;
+        }
+        
+        /* About Hero */
+        .about-hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(29, 53, 87, 0.95)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .about-hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Section Styles */
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1d3557;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #e63946;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Story Section */
+        .story-section {
+            background-color: white;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-text h3 {
+            font-size: 30px;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+        
+        .story-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background-color: #f0f7ff;
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .mv-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #e63946;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 36px;
+        }
+        
+        .mv-card h3 {
+            font-size: 24px;
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #1d3557;
+        }
+        
+        .value-card:hover {
+            border-top-color: #e63946;
+        }
+        
+        .value-icon {
+            font-size: 40px;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h4 {
+            font-size: 20px;
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+        
+        /* Certifications */
+        .certifications {
+            background-color: #f0f7ff;
+        }
+        
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .cert-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .cert-item img {
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .cert-item p {
+            font-weight: 600;
+            color: #1d3557;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .team-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .team-card:hover .team-image img {
+            transform: scale(1.1);
+        }
+        
+        .team-info {
+            padding: 25px;
+        }
+        
+        .team-info h4 {
+            font-size: 20px;
+            color: #1d3557;
+            margin-bottom: 5px;
+        }
+        
+        .team-info p {
+            color: #e63946;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1d3557 0%, #2a4365 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0c1a2d;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #a8dadc;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #a8dadc;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-hero h1 {
+                font-size: 40px;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .about-hero h1 {
+                font-size: 32px;
+            }
+            
+            .about-hero p {
+                font-size: 18px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero {
+                padding: 70px 0;
+            }
+            
+            .about-hero h1 {
+                font-size: 28px;
+            }
+            
+            .logo-text h1 {
+                font-size: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">I</div>
+                <div class="logo-text">
+                    <h1 id="companyNameDisplay">IGUMICH INT'L LIMITED</h1>
+                    <span id="companyTaglineDisplay">Safety & Protection Solutions</span>
+                </div>
+            </div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin-login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="products.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 id="aboutHeroTitle">Our Commitment to Safety Excellence</h1>
+            <p id="aboutHeroDescription">For over a decade, IGUMICH INT'L LIMITED has been at the forefront of safety equipment supply in West Africa, providing certified protection solutions that save lives.</p>
+            <div style="margin-top: 30px;">
+                <a href="products.html" class="btn">Our Safety Products</a>
+                <a href="contact.html" class="btn btn-secondary" style="margin-left: 15px;">Contact Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section-padding story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h3 id="aboutStoryTitle">Our Journey in Safety</h3>
+                    <p id="aboutStoryText1">Founded in 2012, IGUMICH INT'L LIMITED began with a simple mission: to make quality safety equipment accessible to every workplace in West Africa. What started as a small distribution company has grown into a trusted partner for industries across the region.</p>
+                    <p id="aboutStoryText2">We've witnessed firsthand the transformative impact of proper safety equipment. From construction sites to manufacturing plants, healthcare facilities to educational institutions, we've provided the protective gear that keeps workers safe and operations running smoothly.</p>
+                    <p id="aboutStoryText3">Our growth has been fueled by our unwavering commitment to quality, reliability, and customer education. We don't just sell safety products; we provide complete safety solutions tailored to each client's unique needs.</p>
+                    <a href="contact.html" class="btn" style="margin-top: 20px;">Partner With Us</a>
+                </div>
+                <div class="story-image">
+                    <img id="aboutStoryImage" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IGUMICH Safety Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding mission-vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission & Vision</h2>
+                <p>Guiding principles that drive our commitment to safety excellence</p>
+            </div>
+            
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 id="aboutMissionTitle">Our Mission</h3>
+                    <p id="aboutMissionText">To provide certified, high-quality safety equipment and expert guidance that protects workers, prevents accidents, and promotes a culture of safety across all industries in West Africa.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 id="aboutVisionTitle">Our Vision</h3>
+                    <p id="aboutVisionText">To be West Africa's most trusted safety solutions partner, recognized for our commitment to quality, innovation, and making workplaces safer for everyone.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 id="aboutPromiseTitle">Our Promise</h3>
+                    <p id="aboutPromiseText">We guarantee that every product we supply meets international safety standards, and every recommendation we make prioritizes your team's wellbeing and operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide every decision we make</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Safety First</h4>
+                    <p>We believe no job is so important that it cannot be done safely. Protection always comes before profit.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Quality Assurance</h4>
+                    <p>Every product undergoes rigorous quality checks to ensure it meets international safety standards.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Customer Education</h4>
+                    <p>We empower our clients with knowledge about proper safety equipment use and maintenance.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Reliable Service</h4>
+                    <p>Timely delivery and responsive support ensure you get what you need, when you need it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section-padding certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Certifications & Standards</h2>
+                <p>Compliant with international safety regulations</p>
+            </div>
+            
+            <div class="certs-grid">
+                <div class="cert-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ANSI_logo.svg/320px-ANSI_logo.svg.png" alt="ANSI Certified">
+                    <p>ANSI Certified</p>
+                </div>
+                
+                <div class="cert-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/OSHA_logo.svg/320px-OSHA_logo.svg.png" alt="OSHA Compliant">
+                    <p>OSHA Compliant</p>
+                </div>
+                
+                <div class="cert-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/NIOSH_logo.svg/320px-NIOSH_logo.svg.png" alt="NIOSH Approved">
+                    <p>NIOSH Approved</p>
+                </div>
+                
+                <div class="cert-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/CE_logo.svg/320px-CE_logo.svg.png" alt="CE Marked">
+                    <p>CE Marked</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Safety Specialists</h2>
+                <p>Meet the experts dedicated to your protection</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Safety Director">
+                    </div>
+                    <div class="team-info">
+                        <h4>CHINEDU UMUNNAKWE</h4>
+                        <p>Founder & Safety Director</p>
+                        <p style="color: #666; font-size: 14px; font-weight: normal;">15+ years in industrial safety</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Technical Manager">
+                    </div>
+                    <div class="team-info">
+                        <h4>Dr. Amina Bello</h4>
+                        <p>Technical Manager</p>
+                        <p style="color: #666; font-size: 14px; font-weight: normal;">Product Certification Expert</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Client Relations">
+                    </div>
+                    <div class="team-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Client Relations Director</p>
+                        <p style="color: #666; font-size: 14px; font-weight: normal;">Customer Safety Training</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1556157382-2eda2afc49d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Logistics Head">
+                    </div>
+                    <div class="team-info">
+                        <h4>Chukwudi Okoro</h4>
+                        <p>Logistics & Operations Head</p>
+                        <p style="color: #666; font-size: 14px; font-weight: normal;">Supply Chain Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Enhance Your Workplace Safety?</h2>
+            <p>Our safety specialists are ready to assess your needs and recommend the right protective equipment for your team.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/2348033421063?text=Hello%20IGUMICH%20INT'L%20LIMITED!%20I'd%20like%20to%20discuss%20safety%20solutions%20for%20my%20workplace." 
+                   target="_blank" 
+                   class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat with Safety Expert
+                </a>
+                <a href="products.html" class="btn btn-secondary">
+                    <i class="fas fa-boxes"></i> Browse Safety Products
+                </a>
+                <a href="contact.html" class="btn" style="background-color: white; color: #1d3557;">
+                    <i class="fas fa-phone-alt"></i> Request Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 id="footerCompanyName">IGUMICH INT'L LIMITED</h3>
+                    <p>Your trusted partner for premium safety equipment and personal protective gear in West Africa.</p>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-phone" style="margin-right: 10px;"></i> <span id="companyPhone">+234 8033421063</span><br>
+                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> <span id="companyEmail">info@igumich.com</span><br>
+                        <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> <span id="companyWhatsApp">+234 803 342 1063</span>
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Safety Services</h3>
+                    <ul>
+                        <li><a href="products.html">PPE Supply</a></li>
+                        <li><a href="contact.html">Safety Audits</a></li>
+                        <li><a href="contact.html">Equipment Training</a></li>
+                        <li><a href="contact.html">Compliance Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>Mon - Fri: 8am - 6pm</li>
+                        <li>Saturday: 9am - 4pm</li>
+                        <li>Sunday: Closed</li>
+                        <li>24/7 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 <span id="footerCopyrightName">IGUMICH INT'L LIMITED</span>. All rights reserved. | Safety Products Supplier</p>
+                <p style="margin-top: 10px; font-size: 13px;">Compliant with OSHA, ANSI, NISCN, and international safety standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // WhatsApp phone number
+        const WHATSAPP_NUMBER = "2348033421063";
+        
+        // Default about page content
+        const defaultAboutContent = {
+            heroTitle: "Our Commitment to Safety Excellence",
+            heroDescription: "For over a decade, IGUMICH INT'L LIMITED has been at the forefront of safety equipment supply in West Africa, providing certified protection solutions that save lives.",
+            storyTitle: "Our Journey in Safety",
+            storyText1: "Founded in 2012, IGUMICH INT'L LIMITED began with a simple mission: to make quality safety equipment accessible to every workplace in West Africa. What started as a small distribution company has grown into a trusted partner for industries across the region.",
+            storyText2: "We've witnessed firsthand the transformative impact of proper safety equipment. From construction sites to manufacturing plants, healthcare facilities to educational institutions, we've provided the protective gear that keeps workers safe and operations running smoothly.",
+            storyText3: "Our growth has been fueled by our unwavering commitment to quality, reliability, and customer education. We don't just sell safety products; we provide complete safety solutions tailored to each client's unique needs.",
+            storyImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            missionTitle: "Our Mission",
+            missionText: "To provide certified, high-quality safety equipment and expert guidance that protects workers, prevents accidents, and promotes a culture of safety across all industries in West Africa.",
+            visionTitle: "Our Vision",
+            visionText: "To be West Africa's most trusted safety solutions partner, recognized for our commitment to quality, innovation, and making workplaces safer for everyone.",
+            promiseTitle: "Our Promise",
+            promiseText: "We guarantee that every product we supply meets international safety standards, and every recommendation we make prioritizes your team's wellbeing and operational efficiency."
+        };
+
+        // Load content on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAboutPage();
+            setupNavigation();
+        });
+
+        // Load about page content
+        function loadAboutPage() {
+            // Load company info from localStorage
+            const content = JSON.parse(localStorage.getItem('igumichContent')) || getDefaultCompanyInfo();
+            
+            // Update company info
+            document.getElementById('companyNameDisplay').textContent = content.companyName;
+            document.getElementById('companyTaglineDisplay').textContent = content.companyTagline;
+            document.getElementById('footerCompanyName').textContent = content.companyName;
+            document.getElementById('footerCopyrightName').textContent = content.companyName;
+            document.getElementById('companyPhone').textContent = content.companyPhone;
+            document.getElementById('companyEmail').textContent = content.companyEmail;
+            document.getElementById('companyWhatsApp').textContent = `+${WHATSAPP_NUMBER}`;
+            
+            // Load about-specific content
+            const aboutContent = content.aboutContent || defaultAboutContent;
+            
+            // Update about page elements
+            document.getElementById('aboutHeroTitle').textContent = aboutContent.heroTitle;
+            document.getElementById('aboutHeroDescription').textContent = aboutContent.heroDescription;
+            document.getElementById('aboutStoryTitle').textContent = aboutContent.storyTitle;
+            document.getElementById('aboutStoryText1').textContent = aboutContent.storyText1;
+            document.getElementById('aboutStoryText2').textContent = aboutContent.storyText2;
+            document.getElementById('aboutStoryText3').textContent = aboutContent.storyText3;
+            document.getElementById('aboutStoryImage').src = aboutContent.storyImage;
+            document.getElementById('aboutMissionTitle').textContent = aboutContent.missionTitle;
+            document.getElementById('aboutMissionText').textContent = aboutContent.missionText;
+            document.getElementById('aboutVisionTitle').textContent = aboutContent.visionTitle;
+            document.getElementById('aboutVisionText').textContent = aboutContent.visionText;
+            document.getElementById('aboutPromiseTitle').textContent = aboutContent.promiseTitle;
+            document.getElementById('aboutPromiseText').textContent = aboutContent.promiseText;
+        }
+
+        // Get default company info
+        function getDefaultCompanyInfo() {
+            return {
+                companyName: "IGUMICH INT'L LIMITED",
+                companyTagline: "Safety & Protection Solutions",
+                companyPhone: "+234 801 234 5678",
+                companyEmail: "info@igumich.com",
+                aboutContent: defaultAboutContent
+            };
+        }
+
+        // Setup navigation menu
+        function setupNavigation() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // WhatsApp order function
+        window.chatWithExpert = function() {
+            const message = "Hello IGUMICH! I'd like to discuss safety solutions for my workplace and get expert recommendations.";
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        };
+    </script>
+    <script>
+// Visitor Tracking Script
+(function() {
+    // Initialize visitor data
+    let visitors = localStorage.getItem('igumichVisitors');
+    if (!visitors) {
+        visitors = {
+            total: 0,
+            today: 0,
+            todayDate: new Date().toDateString(),
+            dailyStats: {}
+        };
+    } else {
+        visitors = JSON.parse(visitors);
+        
+        // Reset today's count if it's a new day
+        if (visitors.todayDate !== new Date().toDateString()) {
+            visitors.today = 0;
+            visitors.todayDate = new Date().toDateString();
+        }
+    }
+    
+    // Track this visit
+    visitors.total++;
+    visitors.today++;
+    
+    // Track daily stats
+    const today = new Date().toISOString().split('T')[0];
+    if (!visitors.dailyStats) visitors.dailyStats = {};
+    if (!visitors.dailyStats[today]) visitors.dailyStats[today] = 0;
+    visitors.dailyStats[today]++;
+    
+    // Save
+    localStorage.setItem('igumichVisitors', JSON.stringify(visitors));
+    
+    console.log('Visitor tracked:', visitors.total, 'total visitors');
+})();
+</script>
+</body>
+</html>

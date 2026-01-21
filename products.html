@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Products | IGUMICH INT'L LIMITED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: #1d3557;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #14213d;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+        
+        .admin-link {
+            color: #e63946 !important;
+            font-weight: 700 !important;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #1d3557;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: #1d3557;
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            font-size: 14px;
+            color: #e63946;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            color: #1d3557;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e63946;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e63946;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            font-size: 22px;
+            color: #1d3557;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e63946;
+            color: white;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1d3557;
+            transition: 0.3s;
+        }
+        
+        /* Products Hero */
+        .products-hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.9), rgba(29, 53, 87, 0.95)), url('https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .products-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .products-hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Products Filter */
+        .products-filter {
+            background-color: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .filter-search {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .filter-search input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .filter-search input:focus {
+            outline: none;
+            border-color: #1d3557;
+        }
+        
+        .filter-search i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+        
+        .filter-categories {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #1d3557;
+            color: white;
+        }
+        
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #e63946;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            z-index: 2;
+        }
+        
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-details {
+            padding: 25px;
+        }
+        
+        .product-details h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+            font-size: 20px;
+            min-height: 60px;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            min-height: 60px;
+        }
+        
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .spec-badge {
+            background-color: #f0f7ff;
+            color: #1d3557;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e63946;
+            margin-bottom: 20px;
+        }
+        
+        /* WhatsApp Order Section */
+        .whatsapp-order {
+            background-color: #25D366;
+            color: white;
+            padding: 60px 0;
+            margin: 80px 0;
+            text-align: center;
+        }
+        
+        .whatsapp-order h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .whatsapp-order p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .whatsapp-btn-large {
+            background-color: white;
+            color: #25D366;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn-large:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Categories Section */
+        .categories-section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1d3557;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #e63946;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #1d3557;
+            font-size: 36px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #a8dadc;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #a8dadc;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .products-hero h1 {
+                font-size: 40px;
+            }
+            
+            .filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-search {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .products-hero h1 {
+                font-size: 32px;
+            }
+            
+            .products-hero p {
+                font-size: 18px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .whatsapp-order h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .products-hero {
+                padding: 60px 0;
+            }
+            
+            .products-hero h1 {
+                font-size: 28px;
+            }
+            
+            .logo-text h1 {
+                font-size: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .product-details h3 {
+                font-size: 18px;
+            }
+            
+            .product-price {
+                font-size: 24px;
+            }
+        }
+        
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .loading i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #1d3557;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">I</div>
+                <div class="logo-text">
+                    <h1 id="companyNameDisplay">IGUMICH INT'L LIMITED</h1>
+                    <span id="companyTaglineDisplay">Safety & Protection Solutions</span>
+                </div>
+            </div>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin-login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="container">
+            <h1 id="productsPageTitle">Premium Safety Products</h1>
+            <p id="productsPageDescription">Browse our certified safety equipment and personal protective gear. All products meet international safety standards with WhatsApp direct ordering available.</p>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container filter-container">
+            <div class="filter-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search safety products...">
+            </div>
+            <div class="filter-categories" id="filterCategories">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <!-- Categories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="container">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- WhatsApp Order Section -->
+    <section class="whatsapp-order">
+        <div class="container">
+            <h2><i class="fab fa-whatsapp"></i> Instant WhatsApp Ordering</h2>
+            <p>Prefer to order directly via WhatsApp? Click below to chat with our safety specialists for personalized recommendations and bulk order discounts.</p>
+            <a href="https://wa.me/2348033421063?text=Hello%20IGUMICH%20INT'L%20LIMITED!%20I'm%20interested%20in%20your%20safety%20products." 
+               target="_blank" 
+               class="btn whatsapp-btn-large">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp +234 803 342 1063
+            </a>
+            <p style="margin-top: 20px; font-size: 16px; opacity: 0.8;">For inquiries, quotes, and orders - Available 24/7</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container categories-section">
+        <div class="section-title">
+            <h2>Safety Product Categories</h2>
+            <p>Browse products by category</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Categories will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 id="footerCompanyName">IGUMICH INT'L LIMITED</h3>
+                    <p>Your trusted partner for premium safety equipment and personal protective gear in West Africa.</p>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-phone" style="margin-right: 10px;"></i> <span id="companyPhone">+234 801 234 5678</span><br>
+                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> <span id="companyEmail">info@igumich.com</span><br>
+                        <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> <span id="companyWhatsApp">+234 803 342 1063</span>
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Safety Standards</h3>
+                    <ul>
+                        <li>ANSI Certified</li>
+                        <li>OSHA Compliant</li>
+                        <li>NIOSH Approved</li>
+                        <li>CE Marked</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul>
+                        <li>Mon - Fri: 8am - 6pm</li>
+                        <li>Saturday: 9am - 4pm</li>
+                        <li>Sunday: Closed</li>
+                        <li>24/7 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 <span id="footerCopyrightName">IGUMICH INT'L LIMITED</span>. All rights reserved. | Safety Products Supplier</p>
+                <p style="margin-top: 10px; font-size: 13px;">Compliant with OSHA, ANSI, NISCN, and international safety standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // WhatsApp phone number
+        const WHATSAPP_NUMBER = "2348033421063";
+        
+        // Default products data
+        const defaultProducts = [
+            {
+                id: 1,
+                name: "ANSI Z87.1 Safety Goggles",
+                category: "Eye Protection",
+                price: "$24.99",
+                description: "Anti-fog, chemical-splash protection with indirect ventilation. Meets ANSI Z87.1 standard.",
+                image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["ANSI Z87.1", "Anti-Fog", "Chemical Resistant"],
+                badge: "Best Seller"
+            },
+            {
+                id: 2,
+                name: "N95 Respirator Mask (Box of 50)",
+                category: "Respiratory",
+                price: "$89.99",
+                description: "NIOSH-approved particulate respirator with 95% filtration efficiency. FDA registered.",
+                image: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["NIOSH Approved", "95% Filtration", "FDA Registered"],
+                badge: "In Stock"
+            },
+            {
+                id: 3,
+                name: "5lb ABC Fire Extinguisher",
+                category: "Fire Safety",
+                price: "$49.99",
+                description: "UL-rated for Class A, B, and C fires with wall mounting bracket. 5-year warranty.",
+                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["UL Rated", "ABC Class", "5-Year Warranty"],
+                badge: "Popular"
+            },
+            {
+                id: 4,
+                name: "200-Piece Industrial First Aid Kit",
+                category: "First Aid",
+                price: "$129.99",
+                description: "OSHA-compliant comprehensive kit for workplaces up to 25 people. Includes trauma supplies.",
+                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["OSHA Compliant", "200 Pieces", "Trauma Ready"],
+                badge: "Complete Kit"
+            },
+            {
+                id: 5,
+                name: "Industrial Safety Helmet",
+                category: "Head Protection",
+                price: "$34.99",
+                description: "High-density polyethylene shell with suspension system. ANSI/ISEA Z89.1 certified.",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["ANSI Z89.1", "HDPE Shell", "Adjustable"],
+                badge: "New"
+            },
+            {
+                id: 6,
+                name: "High-Visibility Safety Vest",
+                category: "Body Protection",
+                price: "$19.99",
+                description: "Class 2 ANSI/ISEA 107 compliant reflective vest with breathable mesh back.",
+                image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["ANSI 107", "Class 2", "Reflective"],
+                badge: "Best Value"
+            },
+            {
+                id: 7,
+                name: "Chemical Resistant Gloves",
+                category: "Hand Protection",
+                price: "$29.99",
+                description: "Nitrile gloves with textured grip. Resistant to chemicals, oils, and punctures.",
+                image: "https://images.unsplash.com/photo-1584592740039-cddf0671f3d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["Nitrile", "Chemical Resistant", "Textured Grip"],
+                badge: "Hot Item"
+            },
+            {
+                id: 8,
+                name: "Safety Warning Signs Set",
+                category: "Workplace Safety",
+                price: "$59.99",
+                description: "50-piece safety sign set for workplace hazard identification and compliance.",
+                image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                specs: ["50 Pieces", "OSHA Format", "Weatherproof"],
+                badge: "Essential"
+            }
+        ];
+
+        // Default categories
+        const defaultCategories = [
+            { name: "Eye Protection", icon: "fas fa-glasses", count: 12 },
+            { name: "Respiratory", icon: "fas fa-head-side-mask", count: 8 },
+            { name: "Head Protection", icon: "fas fa-hard-hat", count: 15 },
+            { name: "Body Protection", icon: "fas fa-user-shield", count: 20 },
+            { name: "Hand Protection", icon: "fas fa-hand-paper", count: 25 },
+            { name: "Foot Protection", icon: "fas fa-shoe-prints", count: 10 },
+            { name: "Fire Safety", icon: "fas fa-fire-extinguisher", count: 18 },
+            { name: "First Aid", icon: "fas fa-first-aid", count: 22 }
+        ];
+
+        // Load content on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProductsPage();
+            
+            // Setup navigation menu
+            setupNavigation();
+            
+            // Setup search functionality
+            setupSearch();
+            
+            // Setup filter functionality
+            setupFilters();
+        });
+
+        // Load products page content
+        function loadProductsPage() {
+            // Load company info
+            const content = JSON.parse(localStorage.getItem('igumichContent')) || getDefaultContent();
+            
+            // Update page elements
+            document.getElementById('companyNameDisplay').textContent = content.companyName;
+            document.getElementById('companyTaglineDisplay').textContent = content.companyTagline;
+            document.getElementById('footerCompanyName').textContent = content.companyName;
+            document.getElementById('footerCopyrightName').textContent = content.companyName;
+            document.getElementById('companyPhone').textContent = content.companyPhone;
+            document.getElementById('companyEmail').textContent = content.companyEmail;
+            
+            // Set WhatsApp number
+            document.getElementById('companyWhatsApp').textContent = `+${WHATSAPP_NUMBER}`;
+            
+            // Load products
+            const products = content.products || defaultProducts;
+            displayProducts(products);
+            
+            // Load categories for filter
+            const categories = content.categories || defaultCategories;
+            displayFilterCategories(categories);
+            
+            // Load categories grid
+            displayCategoriesGrid(categories);
+        }
+
+        // Get default content
+        function getDefaultContent() {
+            return {
+                companyName: "IGUMICH INT'L LIMITED",
+                companyTagline: "Safety & Protection Solutions",
+                companyPhone: "+234 801 234 5678",
+                companyEmail: "info@igumich.com",
+                products: defaultProducts,
+                categories: defaultCategories
+            };
+        }
+
+        // Display products in grid
+        function displayProducts(products) {
+            const productsGrid = document.getElementById('productsGrid');
+            
+            if (!products || products.length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="loading" style="grid-column: 1 / -1;">
+                        <i class="fas fa-box-open"></i>
+                        <h3>No products available</h3>
+                        <p>Please check back later or contact us for custom orders.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            productsGrid.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-category', product.category.toLowerCase().replace(/\s+/g, '-'));
+                productCard.setAttribute('data-name', product.name.toLowerCase());
+                
+                // Create WhatsApp message
+                const whatsappMessage = `Hello IGUMICH! I'm interested in your product: ${product.name} (${product.price}). Please provide more details and availability.`;
+                const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                productCard.innerHTML = `
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    <div class="product-image">
+                        <img src="${product.image || 'https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'}" 
+                             alt="${product.name}">
+                    </div>
+                    <div class="product-details">
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        
+                        ${product.specs && product.specs.length > 0 ? `
+                            <div class="product-specs">
+                                ${product.specs.map(spec => `<span class="spec-badge">${spec}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        
+                        <div class="product-price">${product.price}</div>
+                        
+                        <a href="${whatsappUrl}" 
+                           target="_blank" 
+                           class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Display filter categories
+        function displayFilterCategories(categories) {
+            const filterContainer = document.getElementById('filterCategories');
+            const uniqueCategories = ['all', ...new Set(categories.map(cat => cat.name))];
+            
+            filterContainer.innerHTML = '';
+            
+            uniqueCategories.forEach((category, index) => {
+                if (index === 0) return; // Skip 'all' for now
+                
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.setAttribute('data-category', category.toLowerCase().replace(/\s+/g, '-'));
+                btn.textContent = category;
+                filterContainer.appendChild(btn);
+            });
+        }
+
+        // Display categories grid
+        function displayCategoriesGrid(categories) {
+            const categoriesGrid = document.getElementById('categoriesGrid');
+            
+            categoriesGrid.innerHTML = '';
+            
+            categories.forEach(category => {
+                const categoryCard = document.createElement('div');
+                categoryCard.className = 'category-card';
+                
+                categoryCard.innerHTML = `
+                    <div class="category-icon">
+                        <i class="${category.icon || 'fas fa-box'}"></i>
+                    </div>
+                    <h3>${category.name}</h3>
+                    <p>${category.count || '12'} Products Available</p>
+                    <button class="btn" style="margin-top: 15px; padding: 8px 20px;" 
+                            onclick="filterByCategory('${category.name.toLowerCase().replace(/\s+/g, '-')}')">
+                        Browse
+                    </button>
+                `;
+                
+                categoriesGrid.appendChild(categoryCard);
+            });
+        }
+
+        // Setup navigation menu
+        function setupNavigation() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Setup search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                const productCards = document.querySelectorAll('.product-card');
+                
+                productCards.forEach(card => {
+                    const productName = card.getAttribute('data-name');
+                    const matchesSearch = productName.includes(searchTerm);
+                    
+                    card.style.display = matchesSearch ? 'block' : 'none';
+                });
+            });
+        }
+
+        // Setup filter functionality
+        function setupFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Filter products
+                    const category = this.getAttribute('data-category');
+                    filterByCategory(category);
+                });
+            });
+        }
+
+        // Filter products by category
+        window.filterByCategory = function(category) {
+            const productCards = document.querySelectorAll('.product-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            productCards.forEach(card => {
+                const productCategory = card.getAttribute('data-category');
+                
+                if (category === 'all' || productCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Scroll to products section
+            document.querySelector('.products-grid').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        };
+
+        // WhatsApp order function
+        window.orderOnWhatsApp = function(productName, productPrice) {
+            const message = `Hello IGUMICH! I want to order: ${productName} (${productPrice}). Please confirm availability and payment details.`;
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        };
+    </script>
+    <script>
+// Visitor Tracking Script
+(function() {
+    // Initialize visitor data
+    let visitors = localStorage.getItem('igumichVisitors');
+    if (!visitors) {
+        visitors = {
+            total: 0,
+            today: 0,
+            todayDate: new Date().toDateString(),
+            dailyStats: {}
+        };
+    } else {
+        visitors = JSON.parse(visitors);
+        
+        // Reset today's count if it's a new day
+        if (visitors.todayDate !== new Date().toDateString()) {
+            visitors.today = 0;
+            visitors.todayDate = new Date().toDateString();
+        }
+    }
+    
+    // Track this visit
+    visitors.total++;
+    visitors.today++;
+    
+    // Track daily stats
+    const today = new Date().toISOString().split('T')[0];
+    if (!visitors.dailyStats) visitors.dailyStats = {};
+    if (!visitors.dailyStats[today]) visitors.dailyStats[today] = 0;
+    visitors.dailyStats[today]++;
+    
+    // Save
+    localStorage.setItem('igumichVisitors', JSON.stringify(visitors));
+    
+    console.log('Visitor tracked:', visitors.total, 'total visitors');
+})();
+</script>
+</body>
+</html>
