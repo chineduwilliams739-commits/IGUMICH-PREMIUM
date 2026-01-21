@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGUMICH INT'L LIMITED | Premium Safety Equipment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: #1d3557;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #14213d;
+        }
+        
+        .admin-link {
+            color: #e63946 !important;
+            font-weight: 700 !important;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #1d3557;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: #1d3557;
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            font-size: 14px;
+            color: #e63946;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            color: #1d3557;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e63946;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e63946;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            font-size: 22px;
+            color: #1d3557;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #e63946;
+            color: white;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1d3557;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.85), rgba(29, 53, 87, 0.9)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #1d3557;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #e63946;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-img {
+            height: 200px;
+            background-color: #f1faee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1d3557;
+            font-size: 60px;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .category-content {
+            padding: 25px;
+        }
+        
+        .category-content h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 220px;
+            background-color: #f1faee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1d3557;
+            font-size: 70px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-content h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e63946;
+            margin: 15px 0;
+        }
+        
+        /* Trust Indicators */
+        .trust-section {
+            background-color: #1d3557;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 80px;
+        }
+        
+        .trust-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .trust-container h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+        
+        .trust-item {
+            padding: 20px;
+        }
+        
+        .trust-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #e63946;
+        }
+        
+        /* About Preview */
+        .about-preview {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+        
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-content h2 {
+            font-size: 36px;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+        
+        .about-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #a8dadc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1d3557;
+            font-size: 24px;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        
+        .about-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #a8dadc;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #a8dadc;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 40px;
+            }
+            
+            .about-preview {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .logo-text h1 {
+                font-size: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">I</div>
+                <div class="logo-text">
+                    <h1 id="companyNameDisplay">IGUMICH INT'L LIMITED</h1>
+                    <span id="companyTaglineDisplay">Safety & Protection Solutions</span>
+                </div>
+            </div>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="products.html">Products & Purchase</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="admin-login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 id="heroTitleDisplay">Premium Safety Products for Every Need</h2>
+            <p id="heroDescriptionDisplay">IGUMICH INT'L LIMITED provides certified personal protective equipment (PPE), industrial safety gear, and emergency response products that meet the highest international standards.</p>
+            <div class="hero-btns">
+                <a href="products.html" class="btn">Shop Safety Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Safety Product Categories</h2>
+            <p>Browse our comprehensive range of certified safety equipment</p>
+        </div>
+        
+        <div class="categories" id="categoriesContainer">
+            <!-- Categories loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Featured Safety Products</h2>
+            <p>Best-selling equipment trusted by safety professionals</p>
+        </div>
+        
+        <div class="featured-products" id="productsContainer">
+            <!-- Products loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container trust-container">
+            <h2>Why Safety Professionals Trust IGUMICH</h2>
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certified Products</h3>
+                    <p>All our products meet or exceed ANSI, OSHA, NIOSH, and CE standards.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Reliable shipping across Nigeria and West Africa with tracking.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Bulk Order Discounts</h3>
+                    <p>Special pricing for businesses, contractors, and government agencies.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>Our safety specialists help you select the right equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="container">
+        <div class="about-preview">
+            <div class="about-content">
+                <h2 id="aboutTitleDisplay">About IGUMICH INT'L LIMITED</h2>
+                <p id="aboutTextDisplay">With over a decade of experience in safety equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses, industries, and institutions across West Africa.</p>
+                <p>We specialize in sourcing and distributing premium personal protective equipment (PPE) that meets international safety standards, ensuring your workforce remains protected in any environment.</p>
+                <p>Our mission is to reduce workplace accidents and promote safety culture through quality products, expert guidance, and reliable service.</p>
+                <a href="about.html" class="btn" style="margin-top: 20px;">Learn More About Us</a>
+            </div>
+            <div class="about-visual">
+                <img id="aboutImageDisplay" src="" alt="About IGUMICH">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 id="footerCompanyName">IGUMICH INT'L LIMITED</h3>
+                    <p>Your trusted partner for premium safety equipment and personal protective gear in West Africa.</p>
+                    <p style="margin-top: 15px;">
+                        <i class="fas fa-phone" style="margin-right: 10px;"></i> <span id="companyPhone">+234 801 234 5678</span><br>
+                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> <span id="companyEmail">info@igumich.com</span>
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products & Purchase</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Safety Categories</h3>
+                    <ul id="footerCategories">
+                        <!-- Categories loaded by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Services</h3>
+                    <ul>
+                        <li><a href="contact.html">Corporate Account Setup</a></li>
+                        <li><a href="contact.html">Safety Consultation</a></li>
+                        <li><a href="contact.html">Product Training</a></li>
+                        <li><a href="contact.html">Equipment Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 <span id="footerCopyrightName">IGUMICH INT'L LIMITED</span>. All rights reserved. | Safety Products Supplier</p>
+                <p style="margin-top: 10px; font-size: 13px;">Compliant with OSHA, ANSI, NISCN, and international safety standards</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Default content
+        const defaultContent = {
+            companyName: "IGUMICH INT'L LIMITED",
+            companyTagline: "Safety & Protection Solutions",
+            companyPhone: "+234 801 234 5678",
+            companyEmail: "info@igumich.com",
+            heroTitle: "Premium Safety Products for Every Need",
+            heroDescription: "IGUMICH INT'L LIMITED provides certified personal protective equipment (PPE), industrial safety gear, and emergency response products that meet the highest international standards.",
+            aboutTitle: "About IGUMICH INT'L LIMITED",
+            aboutText: "With over a decade of experience in safety equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses, industries, and institutions across West Africa.",
+            aboutImage: "",
+            products: [
+                {
+                    name: "ANSI Z87.1 Safety Goggles",
+                    price: "$24.99",
+                    description: "Anti-fog, chemical-splash protection with indirect ventilation.",
+                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "N95 Respirator Mask (Box of 50)",
+                    price: "$89.99",
+                    description: "NIOSH-approved particulate respirator with 95% filtration efficiency.",
+                    image: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "5lb ABC Fire Extinguisher",
+                    price: "$49.99",
+                    description: "UL-rated for Class A, B, and C fires with wall mounting bracket.",
+                    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "200-Piece Industrial First Aid Kit",
+                    price: "$129.99",
+                    description: "OSHA-compliant comprehensive kit for workplaces up to 25 people.",
+                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                }
+            ],
+            categories: [
+                {
+                    name: "Head Protection",
+                    description: "Industrial helmets, bump caps, and accessories meeting ANSI/ISEA standards.",
+                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "Body Protection",
+                    description: "High-visibility clothing, coveralls, protective suits, and flame-resistant apparel.",
+                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "First Aid & Emergency",
+                    description: "Complete first aid kits, emergency response equipment, and trauma supplies.",
+                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                },
+                {
+                    name: "Fire Safety",
+                    description: "Fire extinguishers, blankets, alarms, and suppression systems for all environments.",
+                    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                }
+            ]
+        };
+
+        // Load content on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadContent();
+            
+            // Toggle mobile menu
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            // Simple cart counter
+            const cartCount = document.querySelector('.cart-count');
+            let count = 0;
+            
+            // Add event listeners to product buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn') && e.target.textContent.includes('Add to Cart')) {
+                    e.preventDefault();
+                    count++;
+                    cartCount.textContent = count;
+                    
+                    // Visual feedback
+                    const originalText = e.target.textContent;
+                    e.target.textContent = 'Added!';
+                    e.target.style.backgroundColor = '#2a9d8f';
+                    
+                    setTimeout(() => {
+                        e.target.textContent = originalText;
+                        e.target.style.backgroundColor = '';
+                    }, 1500);
+                }
+            });
+        });
+
+        // Load content from localStorage
+        function loadContent() {
+            const content = JSON.parse(localStorage.getItem('igumichContent')) || defaultContent;
+            
+            // Update company info
+            document.getElementById('companyNameDisplay').textContent = content.companyName;
+            document.getElementById('companyTaglineDisplay').textContent = content.companyTagline;
+            document.getElementById('heroTitleDisplay').textContent = content.heroTitle;
+            document.getElementById('heroDescriptionDisplay').textContent = content.heroDescription;
+            document.getElementById('aboutTitleDisplay').textContent = content.aboutTitle;
+            document.getElementById('aboutTextDisplay').textContent = content.aboutText;
+            document.getElementById('companyPhone').textContent = content.companyPhone;
+            document.getElementById('companyEmail').textContent = content.companyEmail;
+            document.getElementById('footerCompanyName').textContent = content.companyName;
+            document.getElementById('footerCopyrightName').textContent = content.companyName;
+            
+            // Set about image
+            if (content.aboutImage) {
+                document.getElementById('aboutImageDisplay').src = content.aboutImage;
+            }
+            
+            // Load products
+            loadProducts(content.products);
+            
+            // Load categories
+            loadCategories(content.categories);
+            
+            // Load footer categories
+            loadFooterCategories(content.categories);
+        }
+
+        // Load products to homepage
+        function loadProducts(products) {
+            const productsContainer = document.getElementById('productsContainer');
+            
+            if (!productsContainer) return;
+            
+            productsContainer.innerHTML = '';
+            
+            if (!products || products.length === 0) {
+                productsContainer.innerHTML = `
+                    <div class="no-products">
+                        <p>No products available at the moment. Please check back later.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            products.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-img">
+                        ${product.image ? `<img src="${product.image}" alt="${product.name}">` : 
+                          '<i class="fas fa-box"></i>'}
+                    </div>
+                    <div class="product-content">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-price">${product.price}</div>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        // Load categories to homepage
+        function loadCategories(categories) {
+            const categoriesContainer = document.getElementById('categoriesContainer');
+            
+            if (!categoriesContainer) return;
+            
+            categoriesContainer.innerHTML = '';
+            
+            if (!categories || categories.length === 0) {
+                categoriesContainer.innerHTML = `
+                    <div class="no-categories">
+                        <p>No categories available at the moment.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            categories.forEach((category, index) => {
+                const categoryCard = document.createElement('div');
+                categoryCard.className = 'category-card';
+                categoryCard.innerHTML = `
+                    <div class="category-img">
+                        ${category.image ? `<img src="${category.image}" alt="${category.name}">` : 
+                          '<i class="fas fa-tag"></i>'}
+                    </div>
+                    <div class="category-content">
+                        <h3>${category.name}</h3>
+                        <p>${category.description}</p>
+                        <a href="#" class="btn" style="margin-top: 15px; padding: 8px 20px; font-size: 14px;">Browse</a>
+                    </div>
+                `;
+                categoriesContainer.appendChild(categoryCard);
+            });
+        }
+
+        // Load categories to footer
+        function loadFooterCategories(categories) {
+            const footerCategories = document.getElementById('footerCategories');
+            
+            if (!footerCategories) return;
+            
+            footerCategories.innerHTML = '';
+            
+            if (!categories || categories.length === 0) return;
+            
+            categories.forEach((category, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#">${category.name}</a>`;
+                footerCategories.appendChild(li);
+            });
+        }
+    </script>
+    <script>
+// Visitor Tracking Script
+(function() {
+    // Initialize visitor data
+    let visitors = localStorage.getItem('igumichVisitors');
+    if (!visitors) {
+        visitors = {
+            total: 0,
+            today: 0,
+            todayDate: new Date().toDateString(),
+            dailyStats: {}
+        };
+    } else {
+        visitors = JSON.parse(visitors);
+        
+        // Reset today's count if it's a new day
+        if (visitors.todayDate !== new Date().toDateString()) {
+            visitors.today = 0;
+            visitors.todayDate = new Date().toDateString();
+        }
+    }
+    
+    // Track this visit
+    visitors.total++;
+    visitors.today++;
+    
+    // Track daily stats
+    const today = new Date().toISOString().split('T')[0];
+    if (!visitors.dailyStats) visitors.dailyStats = {};
+    if (!visitors.dailyStats[today]) visitors.dailyStats[today] = 0;
+    visitors.dailyStats[today]++;
+    
+    // Save
+    localStorage.setItem('igumichVisitors', JSON.stringify(visitors));
+    
+    console.log('Visitor tracked:', visitors.total, 'total visitors');
+})();
+</script>
+</body>
+</html>
