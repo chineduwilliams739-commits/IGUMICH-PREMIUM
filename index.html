@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGUMICH INT'L LIMITED | Premium Safety Equipment</title>
+    <title>IGUMICH INT'L LIMITED | Premium Safety & Industrial Equipment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
@@ -34,7 +34,7 @@
         
         .btn {
             display: inline-block;
-            background-color: #e63946;
+            background-color: #0056b3;
             color: white;
             padding: 12px 28px;
             border-radius: 4px;
@@ -46,21 +46,37 @@
         }
         
         .btn:hover {
-            background-color: #c1121f;
+            background-color: #004494;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .btn-secondary {
-            background-color: #1d3557;
+            background-color: #e63946;
         }
         
         .btn-secondary:hover {
-            background-color: #14213d;
+            background-color: #c1121f;
+        }
+        
+        .btn-marine {
+            background-color: #1a73e8;
+        }
+        
+        .btn-marine:hover {
+            background-color: #0d62d9;
+        }
+        
+        .btn-construction {
+            background-color: #ff9800;
+        }
+        
+        .btn-construction:hover {
+            background-color: #e68900;
         }
         
         .admin-link {
-            color: #e63946 !important;
+            color: #0056b3 !important;
             font-weight: 700 !important;
         }
         
@@ -89,7 +105,7 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background-color: #1d3557;
+            background: linear-gradient(135deg, #0056b3, #1a73e8);
             color: white;
             display: flex;
             align-items: center;
@@ -106,7 +122,7 @@
         
         .logo-text h1 {
             font-size: 24px;
-            color: #1d3557;
+            color: #0056b3;
             line-height: 1.2;
         }
         
@@ -131,7 +147,7 @@
         }
         
         nav ul li a:hover {
-            color: #e63946;
+            color: #0056b3;
         }
         
         nav ul li a::after {
@@ -141,7 +157,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #e63946;
+            background-color: #0056b3;
             transition: width 0.3s;
         }
         
@@ -193,7 +209,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(29, 53, 87, 0.85), rgba(29, 53, 87, 0.9)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
+            background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.9)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -219,6 +235,7 @@
             gap: 15px;
             justify-content: center;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
         
         /* Categories Section */
@@ -229,7 +246,7 @@
         
         .section-title h2 {
             font-size: 36px;
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
@@ -272,7 +289,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1d3557;
+            color: #0056b3;
             font-size: 60px;
             overflow: hidden;
         }
@@ -288,7 +305,7 @@
         }
         
         .category-content h3 {
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 10px;
             font-size: 22px;
         }
@@ -319,7 +336,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1d3557;
+            color: #0056b3;
             font-size: 70px;
             overflow: hidden;
         }
@@ -335,7 +352,7 @@
         }
         
         .product-content h3 {
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 10px;
             font-size: 20px;
         }
@@ -347,9 +364,54 @@
             margin: 15px 0;
         }
         
+        /* Industries Section */
+        .industries-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+            margin-bottom: 80px;
+        }
+        
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .industry-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .industry-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f0f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #0056b3;
+            font-size: 36px;
+        }
+        
+        .industry-card h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        
         /* Trust Indicators */
         .trust-section {
-            background-color: #1d3557;
+            background-color: #0056b3;
             color: white;
             padding: 60px 0;
             margin-bottom: 80px;
@@ -381,7 +443,7 @@
         .trust-icon {
             font-size: 40px;
             margin-bottom: 20px;
-            color: #e63946;
+            color: #ff9800;
         }
         
         /* About Preview */
@@ -400,7 +462,7 @@
         
         .about-content h2 {
             font-size: 36px;
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 20px;
         }
         
@@ -408,12 +470,12 @@
             flex: 1;
             min-width: 300px;
             height: 400px;
-            background-color: #a8dadc;
+            background: linear-gradient(135deg, #0056b3, #1a73e8);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1d3557;
+            color: white;
             font-size: 24px;
             font-weight: 600;
             overflow: hidden;
@@ -427,7 +489,7 @@
         
         /* Footer */
         footer {
-            background-color: #1d3557;
+            background-color: #003366;
             color: white;
             padding: 60px 0 30px;
         }
@@ -558,7 +620,7 @@
                 <div class="logo-icon">I</div>
                 <div class="logo-text">
                     <h1 id="companyNameDisplay">IGUMICH INT'L LIMITED</h1>
-                    <span id="companyTaglineDisplay">Safety & Protection Solutions</span>
+                    <span id="companyTaglineDisplay">Safety, Marine & Industrial Solutions</span>
                 </div>
             </div>
             
@@ -573,7 +635,7 @@
             <nav>
                 <ul id="nav-menu">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="products.html">Products & Purchase</a></li>
+                    <li><a href="products.html">Products & Equipment</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="admin-login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a></li>
@@ -592,10 +654,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2 id="heroTitleDisplay">Premium Safety Products for Every Need</h2>
-            <p id="heroDescriptionDisplay">IGUMICH INT'L LIMITED provides certified personal protective equipment (PPE), industrial safety gear, and emergency response products that meet the highest international standards.</p>
+            <h2 id="heroTitleDisplay">Premium Equipment for Industry & Safety</h2>
+            <p id="heroDescriptionDisplay">IGUMICH INT'L LIMITED provides certified safety equipment, marine supplies, construction tools, and industrial machinery that meet the highest international standards for diverse industries.</p>
             <div class="hero-btns">
-                <a href="products.html" class="btn">Shop Safety Products</a>
+                <a href="products.html" class="btn">Browse Equipment</a>
+                <a href="products.html?category=safety" class="btn btn-secondary">Safety Equipment</a>
+                <a href="products.html?category=marine" class="btn btn-marine">Marine Equipment</a>
+                <a href="products.html?category=construction" class="btn btn-construction">Construction Tools</a>
             </div>
         </div>
     </section>
@@ -603,8 +668,8 @@
     <!-- Product Categories -->
     <section class="container">
         <div class="section-title">
-            <h2>Safety Product Categories</h2>
-            <p>Browse our comprehensive range of certified safety equipment</p>
+            <h2>Equipment Categories</h2>
+            <p>Browse our comprehensive range of industrial and safety equipment</p>
         </div>
         
         <div class="categories" id="categoriesContainer">
@@ -615,8 +680,8 @@
     <!-- Featured Products -->
     <section class="container">
         <div class="section-title">
-            <h2>Featured Safety Products</h2>
-            <p>Best-selling equipment trusted by safety professionals</p>
+            <h2>Featured Equipment</h2>
+            <p>Best-selling equipment trusted by industry professionals</p>
         </div>
         
         <div class="featured-products" id="productsContainer">
@@ -624,17 +689,61 @@
         </div>
     </section>
 
+    <!-- Industries We Serve -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries We Serve</h2>
+                <p>Providing equipment solutions across multiple sectors</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>Heavy machinery, power tools, scaffolding, and construction safety equipment</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Marine & Offshore</h3>
+                    <p>Marine safety gear, navigation equipment, offshore supplies, and marine tools</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Industrial machinery, production tools, factory equipment, and maintenance supplies</p>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Oil & Gas</h3>
+                    <p>Specialized safety equipment, drilling tools, pipeline supplies, and hazardous area gear</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Indicators -->
     <section class="trust-section">
         <div class="container trust-container">
-            <h2>Why Safety Professionals Trust IGUMICH</h2>
+            <h2>Why Industry Professionals Trust IGUMICH</h2>
             <div class="trust-items">
                 <div class="trust-item">
                     <div class="trust-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3>Certified Products</h3>
-                    <p>All our products meet or exceed ANSI, OSHA, NIOSH, and CE standards.</p>
+                    <p>All equipment meets international standards including ISO, ANSI, OSHA, and CE certifications.</p>
                 </div>
                 
                 <div class="trust-item">
@@ -642,23 +751,23 @@
                         <i class="fas fa-shipping-fast"></i>
                     </div>
                     <h3>Fast Delivery</h3>
-                    <p>Reliable shipping across Nigeria and West Africa with tracking.</p>
+                    <p>Reliable shipping across Nigeria and West Africa with real-time tracking.</p>
                 </div>
                 
                 <div class="trust-item">
                     <div class="trust-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3>Bulk Order Discounts</h3>
-                    <p>Special pricing for businesses, contractors, and government agencies.</p>
+                    <h3>Bulk Order Solutions</h3>
+                    <p>Customized pricing for businesses, contractors, and government projects.</p>
                 </div>
                 
                 <div class="trust-item">
                     <div class="trust-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Expert Support</h3>
-                    <p>Our safety specialists help you select the right equipment.</p>
+                    <h3>Technical Support</h3>
+                    <p>Our industry specialists help you select the right equipment for your specific needs.</p>
                 </div>
             </div>
         </div>
@@ -669,9 +778,9 @@
         <div class="about-preview">
             <div class="about-content">
                 <h2 id="aboutTitleDisplay">About IGUMICH INT'L LIMITED</h2>
-                <p id="aboutTextDisplay">With over a decade of experience in safety equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses, industries, and institutions across West Africa.</p>
-                <p>We specialize in sourcing and distributing premium personal protective equipment (PPE) that meets international safety standards, ensuring your workforce remains protected in any environment.</p>
-                <p>Our mission is to reduce workplace accidents and promote safety culture through quality products, expert guidance, and reliable service.</p>
+                <p id="aboutTextDisplay">With over a decade of experience in industrial equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses across construction, marine, manufacturing, and safety industries in West Africa.</p>
+                <p>We specialize in sourcing and distributing premium equipment that meets international standards, ensuring optimal performance and safety in any industrial environment.</p>
+                <p>Our mission is to enhance operational efficiency and promote safety culture through quality products, expert guidance, and reliable service across all industries we serve.</p>
                 <a href="about.html" class="btn" style="margin-top: 20px;">Learn More About Us</a>
             </div>
             <div class="about-visual">
@@ -686,9 +795,9 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3 id="footerCompanyName">IGUMICH INT'L LIMITED</h3>
-                    <p>Your trusted partner for premium safety equipment and personal protective gear in West Africa.</p>
+                    <p>Your trusted partner for premium safety equipment, marine supplies, construction tools, and industrial machinery in West Africa.</p>
                     <p style="margin-top: 15px;">
-                        <i class="fas fa-phone" style="margin-right: 10px;"></i> <span id="companyPhone">+234 801 234 5678</span><br>
+                        <i class="fas fa-phone" style="margin-right: 10px;"></i> <span id="companyPhone">+234 803 342 1063</span><br>
                         <i class="fas fa-envelope" style="margin-right: 10px;"></i> <span id="companyEmail">info@igumich.com</span>
                     </p>
                 </div>
@@ -697,14 +806,14 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products & Purchase</a></li>
+                        <li><a href="products.html">Products & Equipment</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Safety Categories</h3>
+                    <h3>Equipment Categories</h3>
                     <ul id="footerCategories">
                         <!-- Categories loaded by JavaScript -->
                     </ul>
@@ -714,16 +823,16 @@
                     <h3>Business Services</h3>
                     <ul>
                         <li><a href="contact.html">Corporate Account Setup</a></li>
-                        <li><a href="contact.html">Safety Consultation</a></li>
-                        <li><a href="contact.html">Product Training</a></li>
-                        <li><a href="contact.html">Equipment Maintenance</a></li>
+                        <li><a href="contact.html">Technical Consultation</a></li>
+                        <li><a href="contact.html">Equipment Training</a></li>
+                        <li><a href="contact.html">Maintenance Services</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 <span id="footerCopyrightName">IGUMICH INT'L LIMITED</span>. All rights reserved. | Safety Products Supplier</p>
-                <p style="margin-top: 10px; font-size: 13px;">Compliant with OSHA, ANSI, NISCN, and international safety standards</p>
+                <p>&copy; <span id="currentYear">2023</span> <span id="footerCopyrightName">IGUMICH INT'L LIMITED</span>. All rights reserved. | Industrial Equipment Supplier</p>
+                <p style="margin-top: 10px; font-size: 13px;">Compliant with ISO, OSHA, ANSI, and international industry standards</p>
             </div>
         </div>
     </footer>
@@ -732,60 +841,64 @@
         // Default content
         const defaultContent = {
             companyName: "IGUMICH INT'L LIMITED",
-            companyTagline: "Safety & Protection Solutions",
-            companyPhone: "+234 801 234 5678",
+            companyTagline: "Safety, Marine & Industrial Solutions",
+            companyPhone: "+234 803 342 1063",
             companyEmail: "info@igumich.com",
-            heroTitle: "Premium Safety Products for Every Need",
-            heroDescription: "IGUMICH INT'L LIMITED provides certified personal protective equipment (PPE), industrial safety gear, and emergency response products that meet the highest international standards.",
+            heroTitle: "Premium Equipment for Industry & Safety",
+            heroDescription: "IGUMICH INT'L LIMITED provides certified safety equipment, marine supplies, construction tools, and industrial machinery that meet the highest international standards for diverse industries.",
             aboutTitle: "About IGUMICH INT'L LIMITED",
-            aboutText: "With over a decade of experience in safety equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses, industries, and institutions across West Africa.",
+            aboutText: "With over a decade of experience in industrial equipment supply, IGUMICH INT'L LIMITED has become a trusted partner for businesses across construction, marine, manufacturing, and safety industries in West Africa.",
             aboutImage: "",
             products: [
                 {
-                    name: "ANSI Z87.1 Safety Goggles",
-                    price: "$24.99",
-                    description: "Anti-fog, chemical-splash protection with indirect ventilation.",
-                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Industrial Safety Helmet",
+                    price: "$34.99",
+                    description: "High-density polyethylene shell with suspension system. ANSI/ISEA Z89.1 certified.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    category: "Safety"
                 },
                 {
-                    name: "N95 Respirator Mask (Box of 50)",
-                    price: "$89.99",
-                    description: "NIOSH-approved particulate respirator with 95% filtration efficiency.",
-                    image: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Marine Navigation GPS",
+                    price: "$899.99",
+                    description: "Professional marine GPS with chartplotter and fishfinder capabilities.",
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    category: "Marine"
                 },
                 {
-                    name: "5lb ABC Fire Extinguisher",
-                    price: "$49.99",
-                    description: "UL-rated for Class A, B, and C fires with wall mounting bracket.",
-                    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Concrete Power Mixer",
+                    price: "$2,499.99",
+                    description: "5.5HP diesel concrete mixer with 400L capacity for construction sites.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    category: "Construction"
                 },
                 {
-                    name: "200-Piece Industrial First Aid Kit",
-                    price: "$129.99",
-                    description: "OSHA-compliant comprehensive kit for workplaces up to 25 people.",
-                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Industrial Welding Machine",
+                    price: "$1,299.99",
+                    description: "300A MIG/TIG/ARC welding machine with digital display and accessories.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    category: "Industrial"
                 }
             ],
             categories: [
                 {
-                    name: "Head Protection",
-                    description: "Industrial helmets, bump caps, and accessories meeting ANSI/ISEA standards.",
+                    name: "Safety Equipment",
+                    description: "PPE, fire safety, fall protection, and industrial safety gear meeting international standards.",
                     image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
-                    name: "Body Protection",
-                    description: "High-visibility clothing, coveralls, protective suits, and flame-resistant apparel.",
-                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Marine Equipment",
+                    description: "Navigation systems, marine safety, fishing gear, and offshore supplies.",
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
-                    name: "First Aid & Emergency",
-                    description: "Complete first aid kits, emergency response equipment, and trauma supplies.",
-                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Construction Tools",
+                    description: "Power tools, heavy machinery, scaffolding, and construction equipment.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
-                    name: "Fire Safety",
-                    description: "Fire extinguishers, blankets, alarms, and suppression systems for all environments.",
-                    image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Industrial Machinery",
+                    description: "Manufacturing equipment, welding machines, compressors, and factory tools.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
             ]
         };
@@ -793,6 +906,9 @@
         // Load content on page load
         document.addEventListener('DOMContentLoaded', function() {
             loadContent();
+            
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
             
             // Toggle mobile menu
             const hamburger = document.getElementById('hamburger');
@@ -930,7 +1046,9 @@
                     <div class="category-content">
                         <h3>${category.name}</h3>
                         <p>${category.description}</p>
-                        <a href="#" class="btn" style="margin-top: 15px; padding: 8px 20px; font-size: 14px;">Browse</a>
+                        <a href="products.html?category=${category.name.toLowerCase().replace(' ', '-')}" 
+                           class="btn" 
+                           style="margin-top: 15px; padding: 8px 20px; font-size: 14px;">Browse</a>
                     </div>
                 `;
                 categoriesContainer.appendChild(categoryCard);
@@ -949,7 +1067,7 @@
             
             categories.forEach((category, index) => {
                 const li = document.createElement('li');
-                li.innerHTML = `<a href="#">${category.name}</a>`;
+                li.innerHTML = `<a href="products.html?category=${category.name.toLowerCase().replace(' ', '-')}">${category.name}</a>`;
                 footerCategories.appendChild(li);
             });
         }
