@@ -26,7 +26,7 @@
         /* Sidebar */
         .admin-sidebar {
             width: 250px;
-            background-color: #1d3557;
+            background: linear-gradient(180deg, #0056b3, #003366);
             color: white;
             padding: 20px 0;
             position: fixed;
@@ -109,7 +109,7 @@
         
         .admin-header h1 {
             font-size: 24px;
-            color: #1d3557;
+            color: #0056b3;
         }
         
         .header-actions {
@@ -130,7 +130,7 @@
         .user-avatar {
             width: 35px;
             height: 35px;
-            background-color: #1d3557;
+            background: linear-gradient(135deg, #0056b3, #1a73e8);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -152,12 +152,12 @@
         }
         
         .btn-primary {
-            background-color: #2a9d8f;
+            background: linear-gradient(135deg, #0056b3, #1a73e8);
             color: white;
         }
         
         .btn-primary:hover {
-            background-color: #21867a;
+            background: linear-gradient(135deg, #004494, #0d62d9);
         }
         
         .btn-secondary {
@@ -170,12 +170,12 @@
         }
         
         .btn-logout {
-            background-color: #f4a261;
+            background-color: #ff9800;
             color: white;
         }
         
         .btn-logout:hover {
-            background-color: #e76f51;
+            background-color: #e68900;
         }
         
         /* Content Area */
@@ -213,24 +213,24 @@
         }
         
         .stat-icon.visitors {
-            background-color: #2a9d8f;
+            background: linear-gradient(135deg, #2a9d8f, #21867a);
         }
         
         .stat-icon.products {
-            background-color: #e63946;
+            background: linear-gradient(135deg, #e63946, #c1121f);
         }
         
         .stat-icon.orders {
-            background-color: #f4a261;
+            background: linear-gradient(135deg, #ff9800, #e68900);
         }
         
         .stat-icon.whatsapp {
-            background-color: #25D366;
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
         .stat-info h3 {
             font-size: 32px;
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 5px;
         }
         
@@ -259,7 +259,7 @@
         
         .section-header h2 {
             font-size: 20px;
-            color: #1d3557;
+            color: #0056b3;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -288,7 +288,7 @@
         
         .form-control:focus {
             outline: none;
-            border-color: #1d3557;
+            border-color: #0056b3;
         }
         
         textarea.form-control {
@@ -385,7 +385,7 @@
         }
         
         .product-details h4 {
-            color: #1d3557;
+            color: #0056b3;
             margin-bottom: 5px;
         }
         
@@ -405,12 +405,12 @@
         }
         
         .btn-edit {
-            background-color: #4cc9f0;
+            background: linear-gradient(135deg, #4cc9f0, #3aa8d8);
             color: white;
         }
         
         .btn-delete {
-            background-color: #e63946;
+            background: linear-gradient(135deg, #e63946, #c1121f);
             color: white;
         }
         
@@ -438,7 +438,7 @@
         }
         
         .modal-header {
-            background-color: #1d3557;
+            background: linear-gradient(135deg, #0056b3, #1a73e8);
             color: white;
             padding: 20px;
             display: flex;
@@ -504,11 +504,11 @@
         }
         
         .tab-btn:hover {
-            color: #1d3557;
+            color: #0056b3;
         }
         
         .tab-btn.active {
-            color: #1d3557;
+            color: #0056b3;
             border-bottom-color: #e63946;
         }
         
@@ -564,7 +564,7 @@
             width: 100%;
             text-align: center;
             font-weight: 600;
-            color: #1d3557;
+            color: #0056b3;
         }
         
         /* Responsive */
@@ -650,17 +650,19 @@
         <!-- Sidebar -->
         <aside class="admin-sidebar">
             <div class="admin-logo">
-                <h2><i class="fas fa-shield-alt"></i> IGUMICH Admin</h2>
-                <span>Safety Products Management</span>
+                <h2><i class="fas fa-cogs"></i> IGUMICH Admin</h2>
+                <span>Industrial Equipment Management</span>
             </div>
             
             <nav class="admin-nav">
                 <ul>
                     <li><a href="#" class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
                     <li><a href="#" data-tab="company"><i class="fas fa-building"></i> Company Info</a></li>
-                    <li><a href="#" data-tab="products"><i class="fas fa-boxes"></i> Products</a></li>
+                    <li><a href="#" data-tab="products"><i class="fas fa-boxes"></i> Equipment</a></li>
                     <li><a href="#" data-tab="categories"><i class="fas fa-tags"></i> Categories</a></li>
                     <li><a href="#" data-tab="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="#" data-tab="about"><i class="fas fa-info-circle"></i> About Page</a></li>
+                    <li><a href="#" data-tab="contact"><i class="fas fa-address-book"></i> Contact Page</a></li>
                 </ul>
             </nav>
         </aside>
@@ -717,7 +719,7 @@
                             </div>
                             <div class="stat-info">
                                 <h3 id="productsCount">0</h3>
-                                <p>Total Products</p>
+                                <p>Total Equipment</p>
                             </div>
                         </div>
                         
@@ -727,13 +729,13 @@
                             </div>
                             <div class="stat-info">
                                 <h3>+234 803 342 1063</h3>
-                                <p>WhatsApp Orders</p>
+                                <p>WhatsApp Inquiries</p>
                             </div>
                         </div>
                         
                         <div class="stat-card">
                             <div class="stat-icon orders">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fas fa-chart-line"></i>
                             </div>
                             <div class="stat-info">
                                 <h3 id="todayVisitors">0</h3>
@@ -743,7 +745,7 @@
                     </div>
 
                     <div class="visitor-chart-container">
-                        <h3 style="color: #1d3557; margin-bottom: 20px;">Visitor Analytics (Last 7 Days)</h3>
+                        <h3 style="color: #0056b3; margin-bottom: 20px;">Visitor Analytics (Last 7 Days)</h3>
                         <div class="visitor-chart" id="visitorChart">
                             <!-- Chart will be generated here -->
                         </div>
@@ -756,16 +758,16 @@
                         <h2><i class="fas fa-info-circle"></i> Quick Actions</h2>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
                             <button class="btn btn-primary" data-tab="products">
-                                <i class="fas fa-plus"></i> Add New Product
+                                <i class="fas fa-plus"></i> Add New Equipment
+                            </button>
+                            <button class="btn btn-primary" data-tab="categories">
+                                <i class="fas fa-plus"></i> Add Category
                             </button>
                             <button class="btn btn-primary" data-tab="company">
                                 <i class="fas fa-edit"></i> Edit Company Info
                             </button>
-                            <button class="btn btn-primary" data-tab="whatsapp">
-                                <i class="fab fa-whatsapp"></i> Edit WhatsApp
-                            </button>
-                            <a href="homepage.html" target="_blank" class="btn btn-secondary">
-                                <i class="fas fa-eye"></i> View Homepage
+                            <a href="index.html" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-eye"></i> View Website
                             </a>
                         </div>
                     </div>
@@ -818,9 +820,9 @@
                 <div id="productsTab" class="tab-content">
                     <div class="admin-section">
                         <div class="section-header">
-                            <h2><i class="fas fa-boxes"></i> Products Management</h2>
+                            <h2><i class="fas fa-boxes"></i> Equipment Management</h2>
                             <button class="btn btn-primary" id="addProductBtn">
-                                <i class="fas fa-plus"></i> Add New Product
+                                <i class="fas fa-plus"></i> Add New Equipment
                             </button>
                         </div>
                         
@@ -858,8 +860,87 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="adminWhatsAppMessage">Default Order Message</label>
-                            <textarea id="adminWhatsAppMessage" class="form-control" rows="4">Hello IGUMICH! I'm interested in your product: [PRODUCT_NAME] ([PRODUCT_PRICE]). Please provide more details.</textarea>
+                            <label for="adminWhatsAppMessage">Default Inquiry Message</label>
+                            <textarea id="adminWhatsAppMessage" class="form-control" rows="4">Hello IGUMICH! I'm interested in your equipment: [PRODUCT_NAME] ([PRODUCT_PRICE]). Please provide technical specifications and availability.</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Page Tab -->
+                <div id="aboutTab" class="tab-content">
+                    <div class="admin-section">
+                        <h2><i class="fas fa-info-circle"></i> About Page Content</h2>
+                        
+                        <div class="form-group">
+                            <label for="adminAboutHeroTitle">About Page Hero Title</label>
+                            <input type="text" id="adminAboutHeroTitle" class="form-control" placeholder="Enter about page title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminAboutHeroDescription">About Page Hero Description</label>
+                            <textarea id="adminAboutHeroDescription" class="form-control" placeholder="Enter about page description"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminStoryTitle">Our Story Title</label>
+                            <input type="text" id="adminStoryTitle" class="form-control" placeholder="Enter story title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminStoryText1">Story Text 1</label>
+                            <textarea id="adminStoryText1" class="form-control" placeholder="Enter first paragraph of story" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminStoryText2">Story Text 2</label>
+                            <textarea id="adminStoryText2" class="form-control" placeholder="Enter second paragraph of story" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminStoryText3">Story Text 3</label>
+                            <textarea id="adminStoryText3" class="form-control" placeholder="Enter third paragraph of story" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminMissionTitle">Mission Title</label>
+                            <input type="text" id="adminMissionTitle" class="form-control" placeholder="Enter mission title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminMissionText">Mission Text</label>
+                            <textarea id="adminMissionText" class="form-control" placeholder="Enter mission text" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminVisionTitle">Vision Title</label>
+                            <input type="text" id="adminVisionTitle" class="form-control" placeholder="Enter vision title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminVisionText">Vision Text</label>
+                            <textarea id="adminVisionText" class="form-control" placeholder="Enter vision text" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Page Tab -->
+                <div id="contactTab" class="tab-content">
+                    <div class="admin-section">
+                        <h2><i class="fas fa-address-book"></i> Contact Page Content</h2>
+                        
+                        <div class="form-group">
+                            <label for="adminContactHeroTitle">Contact Page Hero Title</label>
+                            <input type="text" id="adminContactHeroTitle" class="form-control" placeholder="Enter contact page title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminContactHeroDescription">Contact Page Hero Description</label>
+                            <textarea id="adminContactHeroDescription" class="form-control" placeholder="Enter contact page description"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adminContactAddress">Contact Address</label>
+                            <textarea id="adminContactAddress" class="form-control" placeholder="Enter business address" rows="3"></textarea>
                         </div>
                     </div>
                 </div>
@@ -871,44 +952,61 @@
     <div class="modal" id="productModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="modalProductTitle">Add New Product</h3>
+                <h3 id="modalProductTitle">Add New Equipment</h3>
                 <button class="close-modal" id="closeProductModal">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="modalProductName">Product Name *</label>
-                    <input type="text" id="modalProductName" class="form-control" placeholder="Enter product name" required>
+                    <label for="modalProductName">Equipment Name *</label>
+                    <input type="text" id="modalProductName" class="form-control" placeholder="Enter equipment name" required>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="modalProductPrice">Price *</label>
-                        <input type="text" id="modalProductPrice" class="form-control" placeholder="e.g., $24.99" required>
+                        <input type="text" id="modalProductPrice" class="form-control" placeholder="e.g., $1,299.99" required>
                     </div>
                     <div class="form-group">
-                        <label for="modalProductCategory">Category</label>
-                        <select id="modalProductCategory" class="form-control">
-                            <option value="Eye Protection">Eye Protection</option>
-                            <option value="Head Protection">Head Protection</option>
-                            <option value="Respiratory">Respiratory</option>
-                            <option value="Fire Safety">Fire Safety</option>
+                        <label for="modalProductCategory">Category *</label>
+                        <select id="modalProductCategory" class="form-control" required>
+                            <!-- Categories will be loaded here -->
                         </select>
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="modalProductDescription">Description *</label>
-                    <textarea id="modalProductDescription" class="form-control" placeholder="Enter product description" rows="3" required></textarea>
+                    <textarea id="modalProductDescription" class="form-control" placeholder="Enter equipment description" rows="3" required></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label for="modalProductImage">Product Image URL</label>
+                    <label for="modalProductImage">Equipment Image URL</label>
                     <input type="text" id="modalProductImage" class="form-control" placeholder="Enter image URL (e.g., https://images.unsplash.com/photo-...)">
                 </div>
                 
                 <div class="form-group">
+                    <label for="modalProductSpecs">Specifications (comma separated)</label>
+                    <input type="text" id="modalProductSpecs" class="form-control" placeholder="e.g., 300A Output, MIG/TIG/ARC, Digital Display">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalProductBadge">Badge Label</label>
+                    <select id="modalProductBadge" class="form-control">
+                        <option value="">No Badge</option>
+                        <option value="Best Seller">Best Seller</option>
+                        <option value="In Stock">In Stock</option>
+                        <option value="Popular">Popular</option>
+                        <option value="New">New</option>
+                        <option value="Hot Item">Hot Item</option>
+                        <option value="Essential">Essential</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Heavy Duty">Heavy Duty</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
                     <button class="btn btn-primary" id="saveProductBtn">
-                        <i class="fas fa-save"></i> Save Product
+                        <i class="fas fa-save"></i> Save Equipment
                     </button>
                     <button class="btn btn-secondary" id="cancelProductBtn">
                         Cancel
@@ -939,6 +1037,16 @@
                 <div class="form-group">
                     <label for="modalCategoryImage">Category Image URL</label>
                     <input type="text" id="modalCategoryImage" class="form-control" placeholder="Enter image URL">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalCategoryIcon">Icon Class (FontAwesome)</label>
+                    <input type="text" id="modalCategoryIcon" class="form-control" placeholder="e.g., fas fa-hard-hat" value="fas fa-box">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalCategoryCount">Item Count</label>
+                    <input type="number" id="modalCategoryCount" class="form-control" placeholder="e.g., 12" value="12">
                 </div>
                 
                 <div class="form-group">
@@ -1063,44 +1171,69 @@
         // Default data
         const defaultData = {
             companyName: "IGUMICH INT'L LIMITED",
-            companyTagline: "Safety & Protection Solutions",
-            companyPhone: "+234 801 234 5678",
+            companyTagline: "Safety, Marine & Industrial Solutions",
+            companyPhone: "+234 803 342 1063",
             companyEmail: "info@igumich.com",
-            companyAddress: "Safety Equipment Plaza, 123 Industrial Avenue, Ikeja, Lagos, Nigeria",
-            heroTitle: "Premium Safety Products for Every Need",
-            heroDescription: "IGUMICH INT'L LIMITED provides certified personal protective equipment (PPE), industrial safety gear, and emergency response products.",
+            companyAddress: "Industrial Equipment Plaza, 123 Business District, Ikeja, Lagos, Nigeria",
+            heroTitle: "Premium Equipment for Industry & Safety",
+            heroDescription: "IGUMICH INT'L LIMITED provides certified safety equipment, marine supplies, construction tools, and industrial machinery that meet the highest international standards for diverse industries.",
             whatsappNumber: "2348033421063",
-            whatsappMessage: "Hello IGUMICH! I'm interested in your product: [PRODUCT_NAME] ([PRODUCT_PRICE]). Please provide more details.",
+            whatsappMessage: "Hello IGUMICH! I'm interested in your equipment: [PRODUCT_NAME] ([PRODUCT_PRICE]). Please provide technical specifications and availability.",
             products: [
                 {
                     id: 1,
-                    name: "ANSI Z87.1 Safety Goggles",
-                    category: "Eye Protection",
-                    price: "$24.99",
-                    description: "Anti-fog, chemical-splash protection with indirect ventilation.",
-                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Industrial Safety Helmet",
+                    category: "Safety Equipment",
+                    price: "$34.99",
+                    description: "High-density polyethylene shell with suspension system. ANSI/ISEA Z89.1 certified.",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    specs: ["ANSI Z89.1", "HDPE Shell", "Adjustable"],
+                    badge: "Best Seller"
                 },
                 {
                     id: 2,
-                    name: "N95 Respirator Mask (Box of 50)",
-                    category: "Respiratory",
-                    price: "$89.99",
-                    description: "NIOSH-approved particulate respirator with 95% filtration efficiency.",
-                    image: "https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Marine Navigation GPS",
+                    category: "Marine Equipment",
+                    price: "$899.99",
+                    description: "Professional marine GPS with chartplotter and fishfinder capabilities.",
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    specs: ["GPS/GLONASS", "Chartplotter", "Waterproof"],
+                    badge: "In Stock"
                 }
             ],
             categories: [
                 {
-                    name: "Eye Protection",
-                    description: "Safety goggles, glasses, and face shields",
-                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Safety Equipment",
+                    description: "PPE, fire safety, fall protection, and industrial safety gear meeting international standards.",
+                    image: "https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    icon: "fas fa-hard-hat",
+                    count: 12
                 },
                 {
-                    name: "Head Protection",
-                    description: "Helmets, hard hats, and bump caps",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    name: "Marine Equipment",
+                    description: "Navigation systems, marine safety, fishing gear, and offshore supplies.",
+                    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                    icon: "fas fa-ship",
+                    count: 8
                 }
-            ]
+            ],
+            aboutContent: {
+                heroTitle: "Your Trusted Partner in Industrial Solutions",
+                heroDescription: "For over a decade, IGUMICH INT'L LIMITED has been providing comprehensive equipment solutions for safety, marine, construction, and industrial sectors across West Africa.",
+                storyTitle: "Our Industrial Journey",
+                storyText1: "Founded in 2012, IGUMICH INT'L LIMITED began with a vision to provide comprehensive equipment solutions across multiple industries in West Africa. What started as a specialized safety equipment supplier has grown into a multi-sector industrial solutions provider.",
+                storyText2: "We've expanded our expertise to include marine equipment, construction tools, and industrial machinery, becoming a one-stop solution for businesses across diverse sectors. From construction sites to offshore platforms, manufacturing plants to industrial facilities, we provide the equipment that powers industries.",
+                storyText3: "Our growth is driven by our commitment to quality, reliability, and customer-focused solutions. We don't just supply equipment; we provide complete industrial solutions tailored to each client's specific operational needs and challenges.",
+                missionTitle: "Our Mission",
+                missionText: "To provide certified, high-quality industrial equipment and expert solutions that enhance operational efficiency, ensure safety, and drive growth across construction, marine, manufacturing, and safety sectors in West Africa.",
+                visionTitle: "Our Vision",
+                visionText: "To be West Africa's most trusted multi-sector industrial solutions partner, recognized for innovation, reliability, and comprehensive support across all industries we serve."
+            },
+            contactContent: {
+                heroTitle: "Contact Our Industry Specialists",
+                heroDescription: "Have questions about our equipment? Need technical consultation for your project? Our industry specialists are ready to assist you with comprehensive solutions.",
+                companyAddress: "Industrial Equipment Plaza, 123 Business District, Ikeja, Lagos, Nigeria"
+            }
         };
 
         // Check admin login
@@ -1148,11 +1281,35 @@
             document.getElementById('adminWhatsAppNumber').value = data.whatsappNumber;
             document.getElementById('adminWhatsAppMessage').value = data.whatsappMessage;
             
+            // Populate about page content
+            if (data.aboutContent) {
+                document.getElementById('adminAboutHeroTitle').value = data.aboutContent.heroTitle || '';
+                document.getElementById('adminAboutHeroDescription').value = data.aboutContent.heroDescription || '';
+                document.getElementById('adminStoryTitle').value = data.aboutContent.storyTitle || '';
+                document.getElementById('adminStoryText1').value = data.aboutContent.storyText1 || '';
+                document.getElementById('adminStoryText2').value = data.aboutContent.storyText2 || '';
+                document.getElementById('adminStoryText3').value = data.aboutContent.storyText3 || '';
+                document.getElementById('adminMissionTitle').value = data.aboutContent.missionTitle || '';
+                document.getElementById('adminMissionText').value = data.aboutContent.missionText || '';
+                document.getElementById('adminVisionTitle').value = data.aboutContent.visionTitle || '';
+                document.getElementById('adminVisionText').value = data.aboutContent.visionText || '';
+            }
+            
+            // Populate contact page content
+            if (data.contactContent) {
+                document.getElementById('adminContactHeroTitle').value = data.contactContent.heroTitle || '';
+                document.getElementById('adminContactHeroDescription').value = data.contactContent.heroDescription || '';
+                document.getElementById('adminContactAddress').value = data.contactContent.companyAddress || '';
+            }
+            
             // Load products
             loadProductsList(data.products || []);
             
             // Load categories
             loadCategoriesList(data.categories || []);
+            
+            // Load categories for product dropdown
+            loadCategoryDropdown(data.categories || []);
         }
 
         // Load products list
@@ -1161,7 +1318,7 @@
             container.innerHTML = '';
             
             if (!products || products.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #666; padding: 30px;">No products added yet.</p>';
+                container.innerHTML = '<p style="text-align: center; color: #666; padding: 30px;">No equipment added yet.</p>';
                 return;
             }
             
@@ -1175,7 +1332,7 @@
                              alt="${product.name}">
                         <div class="product-details">
                             <h4>${product.name}</h4>
-                            <p>${product.price} • ${product.category}</p>
+                            <p>${product.price} • ${product.category} ${product.badge ? `<span style="background:#e63946;color:white;padding:2px 8px;border-radius:3px;font-size:12px;">${product.badge}</span>` : ''}</p>
                         </div>
                     </div>
                     <div class="product-actions">
@@ -1207,11 +1364,12 @@
                 item.innerHTML = `
                     <div class="product-info">
                         <div style="width: 60px; height: 60px; background: #f0f7ff; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-tag" style="font-size: 24px; color: #1d3557;"></i>
+                            <i class="${category.icon || 'fas fa-tag'}" style="font-size: 24px; color: #0056b3;"></i>
                         </div>
                         <div class="product-details">
                             <h4>${category.name}</h4>
                             <p>${category.description}</p>
+                            <p style="color: #666; font-size: 12px; margin-top: 5px;">${category.count || 0} items</p>
                         </div>
                     </div>
                     <div class="product-actions">
@@ -1224,6 +1382,24 @@
                     </div>
                 `;
                 container.appendChild(item);
+            });
+        }
+
+        // Load categories for product dropdown
+        function loadCategoryDropdown(categories) {
+            const dropdown = document.getElementById('modalProductCategory');
+            dropdown.innerHTML = '';
+            
+            if (!categories || categories.length === 0) {
+                dropdown.innerHTML = '<option value="">No categories available</option>';
+                return;
+            }
+            
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category.name;
+                option.textContent = category.name;
+                dropdown.appendChild(option);
             });
         }
 
@@ -1281,7 +1457,11 @@
             });
             document.getElementById(tabName + 'Tab').classList.add('active');
             
-            document.getElementById('pageTitle').textContent = tabName.charAt(0).toUpperCase() + tabName.slice(1);
+            // Update page title
+            let pageTitle = tabName.charAt(0).toUpperCase() + tabName.slice(1);
+            if (tabName === 'products') pageTitle = 'Equipment Management';
+            if (tabName === 'categories') pageTitle = 'Categories Management';
+            document.getElementById('pageTitle').textContent = pageTitle;
         }
 
         // Product modal functions
@@ -1291,22 +1471,30 @@
             const modal = document.getElementById('productModal');
             const title = document.getElementById('modalProductTitle');
             
+            // Load categories for dropdown
+            const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
+            loadCategoryDropdown(data.categories || []);
+            
             if (product) {
-                title.textContent = 'Edit Product';
+                title.textContent = 'Edit Equipment';
                 editingProductIndex = product.index;
                 document.getElementById('modalProductName').value = product.name || '';
                 document.getElementById('modalProductPrice').value = product.price || '';
                 document.getElementById('modalProductDescription').value = product.description || '';
                 document.getElementById('modalProductImage').value = product.image || '';
-                document.getElementById('modalProductCategory').value = product.category || 'Eye Protection';
+                document.getElementById('modalProductCategory').value = product.category || '';
+                document.getElementById('modalProductSpecs').value = product.specs ? product.specs.join(', ') : '';
+                document.getElementById('modalProductBadge').value = product.badge || '';
             } else {
-                title.textContent = 'Add New Product';
+                title.textContent = 'Add New Equipment';
                 editingProductIndex = -1;
                 document.getElementById('modalProductName').value = '';
                 document.getElementById('modalProductPrice').value = '';
                 document.getElementById('modalProductDescription').value = '';
                 document.getElementById('modalProductImage').value = '';
-                document.getElementById('modalProductCategory').value = 'Eye Protection';
+                document.getElementById('modalProductCategory').value = data.categories && data.categories.length > 0 ? data.categories[0].name : '';
+                document.getElementById('modalProductSpecs').value = '';
+                document.getElementById('modalProductBadge').value = '';
             }
             
             modal.style.display = 'flex';
@@ -1329,12 +1517,16 @@
                 document.getElementById('modalCategoryName').value = category.name || '';
                 document.getElementById('modalCategoryDescription').value = category.description || '';
                 document.getElementById('modalCategoryImage').value = category.image || '';
+                document.getElementById('modalCategoryIcon').value = category.icon || 'fas fa-box';
+                document.getElementById('modalCategoryCount').value = category.count || 12;
             } else {
                 title.textContent = 'Add New Category';
                 editingCategoryIndex = -1;
                 document.getElementById('modalCategoryName').value = '';
                 document.getElementById('modalCategoryDescription').value = '';
                 document.getElementById('modalCategoryImage').value = '';
+                document.getElementById('modalCategoryIcon').value = 'fas fa-box';
+                document.getElementById('modalCategoryCount').value = 12;
             }
             
             modal.style.display = 'flex';
@@ -1371,8 +1563,10 @@
             const description = document.getElementById('modalProductDescription').value;
             const image = document.getElementById('modalProductImage').value;
             const category = document.getElementById('modalProductCategory').value;
+            const specs = document.getElementById('modalProductSpecs').value.split(',').map(s => s.trim()).filter(s => s);
+            const badge = document.getElementById('modalProductBadge').value;
             
-            if (!name || !price || !description) {
+            if (!name || !price || !description || !category) {
                 showAlert('error', 'Please fill in all required fields');
                 return;
             }
@@ -1382,8 +1576,10 @@
                 name,
                 price,
                 description,
-                image: image || 'https://images.unsplash.com/photo-1581579431537-3415688e49e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                category
+                image: image || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                category,
+                specs: specs.length > 0 ? specs : undefined,
+                badge: badge || undefined
             };
             
             const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
@@ -1404,7 +1600,7 @@
             document.getElementById('productsCount').textContent = data.products.length;
             
             closeProductModal();
-            showAlert('success', 'Product saved successfully!');
+            showAlert('success', 'Equipment saved successfully!');
         }
 
         // Save category
@@ -1412,6 +1608,8 @@
             const name = document.getElementById('modalCategoryName').value;
             const description = document.getElementById('modalCategoryDescription').value;
             const image = document.getElementById('modalCategoryImage').value;
+            const icon = document.getElementById('modalCategoryIcon').value;
+            const count = parseInt(document.getElementById('modalCategoryCount').value) || 12;
             
             if (!name || !description) {
                 showAlert('error', 'Please fill in all required fields');
@@ -1421,7 +1619,9 @@
             const category = {
                 name,
                 description,
-                image: image || ''
+                image: image || '',
+                icon: icon || 'fas fa-box',
+                count: count
             };
             
             const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
@@ -1438,6 +1638,7 @@
             
             localStorage.setItem('igumichContent', JSON.stringify(data));
             loadCategoriesList(data.categories);
+            loadCategoryDropdown(data.categories);
             
             closeCategoryModal();
             showAlert('success', 'Category saved successfully!');
@@ -1445,7 +1646,7 @@
 
         // Delete product
         window.deleteProduct = function(index) {
-            if (confirm('Are you sure you want to delete this product?')) {
+            if (confirm('Are you sure you want to delete this equipment?')) {
                 const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
                 
                 if (data.products && data.products[index]) {
@@ -1453,7 +1654,7 @@
                     localStorage.setItem('igumichContent', JSON.stringify(data));
                     loadProductsList(data.products);
                     document.getElementById('productsCount').textContent = data.products.length;
-                    showAlert('success', 'Product deleted successfully!');
+                    showAlert('success', 'Equipment deleted successfully!');
                 }
             }
         };
@@ -1464,9 +1665,19 @@
                 const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
                 
                 if (data.categories && data.categories[index]) {
+                    // Check if any products use this category
+                    const categoryName = data.categories[index].name;
+                    const productsUsingCategory = data.products ? data.products.filter(p => p.category === categoryName) : [];
+                    
+                    if (productsUsingCategory.length > 0) {
+                        showAlert('error', `Cannot delete category. ${productsUsingCategory.length} equipment item(s) use this category. Please reassign them first.`);
+                        return;
+                    }
+                    
                     data.categories.splice(index, 1);
                     localStorage.setItem('igumichContent', JSON.stringify(data));
                     loadCategoriesList(data.categories);
+                    loadCategoryDropdown(data.categories);
                     showAlert('success', 'Category deleted successfully!');
                 }
             }
@@ -1476,6 +1687,7 @@
         function saveAllData() {
             const data = JSON.parse(localStorage.getItem('igumichContent')) || defaultData;
             
+            // Save company info
             data.companyName = document.getElementById('adminCompanyName').value;
             data.companyTagline = document.getElementById('adminCompanyTagline').value;
             data.companyPhone = document.getElementById('adminCompanyPhone').value;
@@ -1485,6 +1697,25 @@
             data.heroDescription = document.getElementById('adminHeroDescription').value;
             data.whatsappNumber = document.getElementById('adminWhatsAppNumber').value;
             data.whatsappMessage = document.getElementById('adminWhatsAppMessage').value;
+            
+            // Save about page content
+            data.aboutContent = data.aboutContent || {};
+            data.aboutContent.heroTitle = document.getElementById('adminAboutHeroTitle').value;
+            data.aboutContent.heroDescription = document.getElementById('adminAboutHeroDescription').value;
+            data.aboutContent.storyTitle = document.getElementById('adminStoryTitle').value;
+            data.aboutContent.storyText1 = document.getElementById('adminStoryText1').value;
+            data.aboutContent.storyText2 = document.getElementById('adminStoryText2').value;
+            data.aboutContent.storyText3 = document.getElementById('adminStoryText3').value;
+            data.aboutContent.missionTitle = document.getElementById('adminMissionTitle').value;
+            data.aboutContent.missionText = document.getElementById('adminMissionText').value;
+            data.aboutContent.visionTitle = document.getElementById('adminVisionTitle').value;
+            data.aboutContent.visionText = document.getElementById('adminVisionText').value;
+            
+            // Save contact page content
+            data.contactContent = data.contactContent || {};
+            data.contactContent.heroTitle = document.getElementById('adminContactHeroTitle').value;
+            data.contactContent.heroDescription = document.getElementById('adminContactHeroDescription').value;
+            data.contactContent.companyAddress = document.getElementById('adminContactAddress').value;
             
             localStorage.setItem('igumichContent', JSON.stringify(data));
             showAlert('success', 'All changes saved successfully!');
